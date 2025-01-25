@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class DescriptionCard extends StatelessWidget {
-  const DescriptionCard({
-    super.key,
-  });
+  final String? descript;
+
+  const DescriptionCard({super.key, required this.descript});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Text(
-        "iasjfoiajsdoifasoidfjoasifjoiasjfdoiaoiasdjfoiajfoiajsofiaosdijfaoifjdoaijdfoiajdfoijasofijasoifjoasidfjsoiajodfia",
+        descript!,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
       ),

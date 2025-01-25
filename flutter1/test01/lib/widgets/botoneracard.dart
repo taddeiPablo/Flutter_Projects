@@ -8,6 +8,8 @@ class BotoneraCard extends StatelessWidget {
     // aqui creo una variable, apartir de un componenete de estilos para los tres botones
     // como los botones van a ser iguales en estilos podemos crear una variable para dicho
     // fin
+    // TAREA A TERMINAR : SEPARAR LOS BOTONES A WIDGETS PROPIOS Y PODER IMPLEMENTAR ESTADOS CON
+    // EL STATEFULWIDGET PARA LOS COLORES DE LOS BOTONES.
     const textStyle = TextStyle(
         color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold);
     return Row(
