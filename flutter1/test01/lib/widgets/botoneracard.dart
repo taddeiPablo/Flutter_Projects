@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:test01/widgets/botones/likeButton.dart';
 
+//
 class BotoneraCard extends StatelessWidget {
+  //
   const BotoneraCard({super.key});
 
+  //
   @override
   Widget build(BuildContext context) {
     // aqui creo una variable, apartir de un componenete de estilos para los tres botones
@@ -15,8 +19,7 @@ class BotoneraCard extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        TextButton(
-            onPressed: () {}, child: const Text("Me gusta", style: textStyle)),
+        const LikeButton(),
         TextButton(
             onPressed: () {}, child: const Text("Comentar", style: textStyle)),
         TextButton(
