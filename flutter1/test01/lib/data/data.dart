@@ -24,5 +24,12 @@ const List<Map<String, String>> listCard = [
     "descripcion": "aqui seguimos probando esta nueva version",
     "image":
         "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "avatar": "NS3",
+    "name": "Nuevo Usuario 3",
+    "descripcion": "otro usuario nuevo misma imagen",
+    "image":
+        "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];
