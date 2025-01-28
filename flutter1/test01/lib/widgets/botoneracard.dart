@@ -3,10 +3,11 @@ import 'package:test01/widgets/botones/likeButton.dart';
 
 // aqui creo un widget para crear una botonera en la parte baja de la card
 class BotoneraCard extends StatelessWidget {
-  //
+  // aqui el constructor de este widget el mismo no requiere ningun parametro adicional
   const BotoneraCard({super.key});
 
-  //
+  // aqui en el build armamos la estructura para el boton
+  // donde utilizo una fila y le añado tres botones.
   @override
   Widget build(BuildContext context) {
     // aqui creo una variable, apartir de un componenete de estilos para los tres botones
