@@ -50,7 +50,8 @@ class CardFeed extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 280,
-              child: Image.network(card["image"]!, fit: BoxFit.cover),
+              child: Image.asset(card[
+                  "image"]!), //Image.network(card["image"]!, fit: BoxFit.cover),
             ),
             Container(
               child: const BotoneraCard(),
