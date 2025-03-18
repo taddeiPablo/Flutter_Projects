@@ -1,4 +1,6 @@
 /// aqui importamos la libreria necesaria para construir la GUI
+library;
+
 import 'package:flutter/material.dart';
 import 'package:test01/widgets/avatarcard.dart';
 import 'package:test01/widgets/botoneracard.dart';
@@ -47,7 +49,7 @@ class CardFeed extends StatelessWidget {
                 descript: card["descripcion"],
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 280,
               child: Image.asset(card[

@@ -1,4 +1,6 @@
 /// aqui importamos la libreria necesaria para construir la GUI
+library;
+
 import 'package:flutter/material.dart';
 import 'package:test01/widgets/cardFeedList.dart';
 
