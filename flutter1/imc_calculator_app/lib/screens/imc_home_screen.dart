@@ -23,6 +23,8 @@ class ImcHomeScreen extends StatefulWidget {
 // y que me permitira manejar los estados de la clase ImcHomeScreen
 // ademas esta clase notese que es privada.
 class _ImcHomeScreenState extends State<ImcHomeScreen> {
+  // aqui declaro las variables necesarias
+  // para pasasrle al wigdet NumberSelector
   int selectedAge = 20;
   int selectedWight = 90;
   // aqui se implementa el metodo build que me permitira construir
