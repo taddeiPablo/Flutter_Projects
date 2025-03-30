@@ -1,12 +1,19 @@
-//
+// aqui librerias necesarias para el armado del widget
 import 'package:flutter/material.dart';
 import 'package:imc_calculator_app/core/app_colors.dart';
 import 'package:imc_calculator_app/core/app_text_styles.dart';
 
 //
 class HeightSelector extends StatefulWidget {
+  final double height;
+  final Function(double) onChangedHeight;
+
   //
-  const HeightSelector({super.key});
+  const HeightSelector({
+    super.key,
+    required this.height,
+    required this.onChangedHeight,
+  });
 
   //
   @override
@@ -32,16 +39,18 @@ class _HeightSelectorState extends State<HeightSelector> {
           child: Column(
             children: [
               Text("ALTURA", style: AppTextStyles.genderTitleSeleted),
+              //height.toStringAsFixed(0)
               Text(
-                "${height.toStringAsFixed(0)} Cm",
+                "${widget.height.toStringAsFixed(0)} Cm",
                 style: AppTextStyles.genderTitleSeleted,
               ),
               Slider(
-                value: height,
+                value: widget.height,
                 onChanged: (valueChanged) {
-                  setState(() {
+                  /*setState(() {
                     height = valueChanged;
-                  });
+                  });*/
+                  widget.onChangedHeight(valueChanged);
                 },
                 min: 150,
                 max: 220,

@@ -27,28 +27,47 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
   // para pasasrle al wigdet NumberSelector
   int selectedAge = 20;
   int selectedWight = 90;
+  double selectedheight = 150;
   // aqui se implementa el metodo build que me permitira construir
   // la vista de la pantalla.
   // en este caso se retorna un Column que contiene un widget GenderSelector
   @override
   Widget build(BuildContext context) {
+    // aqui defino una columna para comenzar a esstructura la vista
     return Column(
       children: [
+        // aqui utilizo el widget GenderSelector que me permitira
+        // seleccionar el genero del usuario.
         GenderSelector(),
-        HeightSelector(),
+        // aqui utilizo el widget HeightSelector que me permitira
+        // seleccionar la altura del usuario.
+        HeightSelector(
+          height: selectedheight,
+          onChangedHeight: (p0) {
+            setState(() {
+              selectedheight = p0;
+            });
+          },
+        ),
         Padding(
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
+              // aqui utilizo el widget NumberSelector que me permitira
+              // seleccionar el peso del usuario. y ademas debemos pasarle
+              // las funciones onDecrement y onIncrement que me permitiran
+              // decrementar o incrementar el peso del usuario.
               Expanded(
                 child: NumberSelector(
                   title: "PESO",
                   value: selectedWight,
+                  // aqui desminuimos el valor del peso en 1
                   onDecrement: () {
                     setState(() {
                       selectedWight--;
                     });
                   },
+                  // aqui incrementamos el valor del peso en 1
                   onIncrement: () {
                     setState(() {
                       selectedWight++;
@@ -57,15 +76,21 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
                 ),
               ),
               SizedBox(width: 16),
+              // aqui vuelvo a utilizar el widget NumberSelector que me permitira
+              // seleccionar la edad del usuario. y ademas debemos pasarle
+              // las funciones onDecrement y onIncrement que me permitiran
+              // decrementar o incrementar la edad del usuario.
               Expanded(
                 child: NumberSelector(
                   title: "EDAD",
                   value: selectedAge,
+                  // aqui desminuimos el valor de la edad en 1
                   onDecrement: () {
                     setState(() {
                       selectedAge--;
                     });
                   },
+                  // aqui incrementamos el valor de la edad en 1
                   onIncrement: () {
                     setState(() {
                       selectedAge++;
