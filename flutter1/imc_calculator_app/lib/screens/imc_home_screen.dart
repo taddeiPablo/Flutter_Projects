@@ -5,6 +5,7 @@ import 'package:imc_calculator_app/components/height_selector.dart';
 import 'package:imc_calculator_app/components/number_selector.dart';
 import 'package:imc_calculator_app/core/app_colors.dart';
 import 'package:imc_calculator_app/core/app_text_styles.dart';
+import 'package:imc_calculator_app/screens/imc_result_screen.dart';
 
 // aqui declaro la clase ImcHomeScreen que utilizare como una screen
 // o view de nuestra app
@@ -108,7 +109,19 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
             height: 60,
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // aqui vamos a navegar a la siguientte pantalla.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => ImcResultScreen(
+                          height: selectedheight,
+                          weight: selectedWight,
+                        ),
+                  ),
+                );
+              },
               style: ButtonStyle(
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(

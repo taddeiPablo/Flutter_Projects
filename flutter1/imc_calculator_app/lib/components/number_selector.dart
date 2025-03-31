@@ -58,6 +58,7 @@ class _NumberSelectorState extends State<NumberSelector> {
               children: [
                 // boton de restar
                 FloatingActionButton(
+                  heroTag: null,
                   onPressed: () {
                     // aqui llamo a la funcion que le pase por parametro
                     // con esta vamos a realizar la resta del valor
@@ -70,6 +71,7 @@ class _NumberSelectorState extends State<NumberSelector> {
                 SizedBox(width: 16),
                 // boton de sumar
                 FloatingActionButton(
+                  heroTag: null,
                   onPressed: () {
                     // aqui llamo a la funcion que le pase por parametro
                     // con esta vamos a realizar la suma del valor
