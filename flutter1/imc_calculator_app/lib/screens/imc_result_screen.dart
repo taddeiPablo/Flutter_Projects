@@ -126,7 +126,8 @@ class ImcResultScreen extends StatelessWidget {
     );
   }
 
-  //
+  // Aqui armo la funcion por la cual en base al valor calculado
+  // del imc se le asigna un color a la pantalla.
   Color getColorByImc(double imc) {
     return switch (imc) {
       < 18.5 => AppColors.imcBlue,
@@ -136,7 +137,8 @@ class ImcResultScreen extends StatelessWidget {
     };
   }
 
-  //
+  // aqui armo la funcion por la cual en base al valor calculado
+  // del imc se le asigna un tipo a la pantalla.
   String getTypeByImc(double imc) {
     return switch (imc) {
       < 18.5 => "Bajo peso",
@@ -146,7 +148,8 @@ class ImcResultScreen extends StatelessWidget {
     };
   }
 
-  //
+  // aqui armo la funcion por la cual en base al valor calculado
+  // del imc se le asigna una descripcion a la pantalla.
   String getDescriptionByImc(double imc) {
     return switch (imc) {
       < 18.5 => "Debes comer más",

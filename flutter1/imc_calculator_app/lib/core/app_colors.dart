@@ -1,9 +1,11 @@
-//
+// LIBRERIA DE FLUTTER NECESARIA PARA UTILIZAR LOS COLORES
 import 'dart:ui';
 
-//
+// aqui creo esta clase la cual almacena los colores que utilizo en la app
+// y los declaro como constantes para poder utilizarlos en cualquier parte de la app
 class AppColors {
-  //
+  // aqui declaro los colores que utilizo en la app
+  // y los declaro como constantes para poder utilizarlos.
   static const Color primary = Color(0xFF38034D);
   static const Color secondary = Color(0xFF73027E);
   static const Color tertiary = Color(0xFF2A018A);

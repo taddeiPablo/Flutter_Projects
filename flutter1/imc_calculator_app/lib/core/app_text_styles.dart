@@ -1,6 +1,9 @@
+// aqui importo la libreria de flutter necesaria para crear lo necesasrio
 import 'package:flutter/material.dart';
 
-//
+// aqui creo una clase AppTextStyles que contiene los estilos de texto que se van a utilizar en la aplicacion
+// la clase es estatica para que no se pueda instanciar y los estilos son estaticos para que se puedan utilizar sin crear una instancia de la clase
+// la clase contiene los estilos de texto que se van a utilizar en la aplicacion
 class AppTextStyles {
   //
   static const TextStyle genderTitleSeleted = TextStyle(
