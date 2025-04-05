@@ -21,7 +21,7 @@ class SuperHeroDetailScreen extends StatelessWidget {
         children: [
           Image.network(
             superheroDetails.url,
-            height: 550,
+            height: 450,
             width: double.infinity,
             fit: BoxFit.cover,
             alignment: Alignment(0, -0.6),
