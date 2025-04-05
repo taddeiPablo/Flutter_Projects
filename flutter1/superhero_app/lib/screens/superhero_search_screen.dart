@@ -105,7 +105,7 @@ class _SuperHeroSearchScreenState extends State<SuperHeroSearchScreen> {
         child: Column(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(10),
               child: Image.network(
                 item.url,
                 height: 250,
