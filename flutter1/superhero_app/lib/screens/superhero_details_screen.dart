@@ -48,32 +48,31 @@ class SuperHeroDetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.end,
+                //double.parse(superheroDetails.powerstats.power)
                 children: [
                   SuperHeroStat(
                     statName: "Power",
-                    stat: double.parse(superheroDetails.powerstats.power),
+                    statStr: superheroDetails.powerstats.power,
                   ),
                   SuperHeroStat(
                     statName: "Strength",
-                    stat: double.parse(superheroDetails.powerstats.strength),
+                    statStr: superheroDetails.powerstats.strength,
                   ),
                   SuperHeroStat(
                     statName: "Intelligence",
-                    stat: double.parse(
-                      superheroDetails.powerstats.intelligence,
-                    ),
+                    statStr: superheroDetails.powerstats.intelligence,
                   ),
                   SuperHeroStat(
                     statName: "Speed",
-                    stat: double.parse(superheroDetails.powerstats.speed),
+                    statStr: superheroDetails.powerstats.speed,
                   ),
                   SuperHeroStat(
                     statName: "Combat",
-                    stat: double.parse(superheroDetails.powerstats.combat),
+                    statStr: superheroDetails.powerstats.combat,
                   ),
                   SuperHeroStat(
                     statName: "Durability",
-                    stat: double.parse(superheroDetails.powerstats.durability),
+                    statStr: superheroDetails.powerstats.durability,
                   ),
                 ],
               ),

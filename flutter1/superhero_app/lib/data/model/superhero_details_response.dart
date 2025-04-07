@@ -1,4 +1,4 @@
-//
+// aqui creo la clase SuperheroDetailsResponse que es la que me va a devolver la api
 class SuperheroDetailsResponse {
   final String id;
   final String name;
@@ -6,7 +6,8 @@ class SuperheroDetailsResponse {
   final String realName;
   final PowerstatsResponse powerstats;
 
-  //
+  // aqui creo el constructor de la clase SuperheroDetailsResponse
+  // y le paso los parametros que me va a devolver la api
   SuperheroDetailsResponse({
     required this.id,
     required this.name,
@@ -15,6 +16,8 @@ class SuperheroDetailsResponse {
     required this.powerstats,
   });
 
+  // aqui creo el factory que me va a devolver la api
+  // y le paso los parametros que me va a devolver la api
   factory SuperheroDetailsResponse.fromJson(Map<String, dynamic> json) {
     return SuperheroDetailsResponse(
       id: json["id"],
@@ -26,6 +29,8 @@ class SuperheroDetailsResponse {
   }
 }
 
+// aqui creo la clase PowerstatsResponse que es la que me va a devolver la api
+// y le paso los parametros que me va a devolver la api
 class PowerstatsResponse {
   final String intelligence;
   final String strength;
@@ -34,6 +39,8 @@ class PowerstatsResponse {
   final String power;
   final String combat;
 
+  // aqui creo el constructor de la clase PowerstatsResponse
+  // y le paso los parametros que me va a devolver la api
   PowerstatsResponse({
     required this.intelligence,
     required this.strength,
@@ -42,15 +49,16 @@ class PowerstatsResponse {
     required this.power,
     required this.combat,
   });
-
+  // aqui creo el factory que me va a devolver la api
+  // y le paso los parametros que me va a devolver la apis
   factory PowerstatsResponse.fromJson(Map<String, dynamic> json) {
     return PowerstatsResponse(
-      intelligence: json["intelligence"] == "null" ? "0" : json["intelligence"],
-      strength: json["strength"] == "null" ? "0" : json["strength"],
-      speed: json["speed"] == "null" ? "0" : json["speed"],
-      durability: json["durability"] == "null" ? "0" : json["durability"],
-      power: json["power"] == "null" ? "0" : json["power"],
-      combat: json["combat"] == "null" ? "0" : json["combat"],
+      intelligence: json["intelligence"],
+      strength: json["strength"],
+      speed: json["speed"],
+      durability: json["durability"],
+      power: json["power"],
+      combat: json["combat"],
     );
   }
 }

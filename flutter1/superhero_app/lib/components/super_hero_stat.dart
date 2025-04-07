@@ -1,17 +1,25 @@
-//
+// importando las librerias necesarias
 import 'package:flutter/material.dart';
 
-//
+// creando la clase SuperHeroStat que extiende StatelessWidget
+// esta clase representa un widget que muestra una barra de estadisticas de un superheroe
 class SuperHeroStat extends StatelessWidget {
-  final double stat;
   final String statName;
+  final String statStr;
 
-  //
-  const SuperHeroStat({super.key, required this.stat, required this.statName});
+  // constructor de la clase SuperHeroStat
+  // recibe dos parametros: statStr y statName
+  const SuperHeroStat({
+    super.key,
+    required this.statStr,
+    required this.statName,
+  });
 
-  //
+  // el metodo build que construye el widget
+  // este metodo es llamado cada vez que el widget necesita ser reconstruido
   @override
   Widget build(BuildContext context) {
+    double stat = getParseStat(statStr); //double.parse(statStr);
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -24,7 +32,7 @@ class SuperHeroStat extends StatelessWidget {
     );
   }
 
-  //
+  // metodo que devuelve el color de la barra de estadisticas
   Color getStatColor(double value) {
     if (value >= 50 && value <= 100) {
       return Colors.red;
@@ -41,5 +49,11 @@ class SuperHeroStat extends StatelessWidget {
     } else {
       return Colors.black;
     }
+  }
+
+  // metodo que convierte el string de la estadistica a un double
+  // si el string es "null", devuelve 0.0
+  double getParseStat(String statStr) {
+    return statStr == "null" ? 0.0 : double.parse(statStr);
   }
 }
