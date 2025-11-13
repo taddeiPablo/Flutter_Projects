@@ -112,6 +112,32 @@ class _SuperHeroSearchScreenState extends State<SuperHeroSearchScreen> {
                 width: double.infinity,
                 fit: BoxFit.cover,
                 alignment: Alignment(0, -0.6),
+                headers: const {
+                  'User-Agent':
+                      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                  'Referer': 'https://www.superherodb.com/',
+                },
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    color: Colors.grey[300],
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.error_outline, size: 48),
+                          SizedBox(height: 8),
+                          Text('Error cargando imagen'),
+                          SizedBox(height: 4),
+                          Text(
+                            error.toString(),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
             Padding(
